@@ -1,0 +1,17 @@
+<div class="container mt-5">
+
+  <app-room-form (myOnSubmit)="addRoom($event)"></app-room-form>
+
+  <app-search-form (myOnChange)="price = $event.value"></app-search-form>
+
+  <div class="row justify-content-center">
+    <div class="col-2">
+      <button class="btn btn-danger my-5" (click)="shuffleArray()">Random sort</button>
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <app-room *ngFor="let room of rooms | filterPipe: price" [room]="room"></app-room>
+  </ul>
+
+</div>

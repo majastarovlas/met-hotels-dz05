@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+  <div class="col-4">
+
+    <form (ngSubmit)="onSubmit(idInput, titleInput, priceInput)" class="card card-body mb-3 p-3">
+
+      <div class="mb-3">
+        <label for="roomId">Id</label>
+        <input type="text" name="roomIdName" id="roomId" class="form-control" #idInput>
+      </div>
+
+      <div class="mb-3">
+        <label for="roomTitle">Title</label>
+        <input type="text" name="roomTitleName" id="roomTitle" class="form-control" #titleInput>
+      </div>
+
+      <div class="mb-3">
+        <label for="roomPrice">Price</label>
+        <input type="text" name="roomPriceName" id="roomPrice" class="form-control" #priceInput>
+      </div>
+
+      <button type="submit" class="btn btn-success">Add new room</button>
+
+    </form>
+
+  </div>
+</div>
